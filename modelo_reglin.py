@@ -2,6 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.metrics import r2_score, mean_squared_error
 
 # Importamos nuestro data frame
 df = pd.read_csv('/Users/francoquintanilla/Desktop/advertising.csv')
@@ -51,9 +52,9 @@ h = lambda x, theta: theta[0] + theta[1]*x
 j_i = lambda x, y, theta: (h(x, theta) - y)**2 
 
 # Parametros
-alpha = 0.0001
+alpha = 0.001
 n = 100000
-theta = [1, 1]
+theta = [7, 0.05]
 
 # Entrenamiento
 for i in range(n):
@@ -100,4 +101,19 @@ plt.xlabel("Distribución en TV")
 plt.ylabel("Ventas")
 plt.show()
 
-"""Como podemos ver, vamos por buen camino de la regresión lineal de primer orden. Si tratamos de meter las variables de "Radio" y "Newspaper" el modelo empieza a tener errores demasiado grandes y el modelo ya no se ajusta correctamente."""
+# Hacemos algunas predicciones
+y_pred = theta[0] + theta[1]*x_test
+
+# Calculamos el coeficiente de determinación
+CoD = r2_score(y_test, y_pred)
+print("El coeficiente de determinación es de:", CoD)
+
+# Calculamos el MSE (Mean Squared Error)
+MSE = mean_squared_error(y_test, y_pred)
+print("El error cuadratico medio es de:", MSE)
+
+""" Como podemos ver, vamos por buen camino de la regresión lineal de primer orden con un coeficiente de determinación de 0.798, 
+el cual se podría mejorar y ajustar con un modelo de regresión no lineal. 
+
+Si tratamos de meter las variables de "Radio" y "Newspaper" el modelo empieza a tener errores 
+demasiado grandes y el modelo ya no se ajusta correctamente, ya que estas variables meten demasiado ruido a nuestro probelma original."""

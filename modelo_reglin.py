@@ -2,7 +2,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import r2_score, mean_squared_error
 
 # Importamos nuestro data frame
 df = pd.read_csv('/Users/francoquintanilla/Desktop/advertising.csv')
@@ -105,11 +104,13 @@ plt.show()
 y_pred = theta[0] + theta[1]*x_test
 
 # Calculamos el coeficiente de determinación
-CoD = r2_score(y_test, y_pred)
+c_mat = np.corrcoef(y_test, y_pred)
+CoD = c_mat[0,1]
+CoD = CoD**2
 print("El coeficiente de determinación es de:", CoD)
 
 # Calculamos el MSE (Mean Squared Error)
-MSE = mean_squared_error(y_test, y_pred)
+MSE = np.square(np.subtract(y_test, y_pred)).mean()
 print("El error cuadratico medio es de:", MSE)
 
 """ Como podemos ver, vamos por buen camino de la regresión lineal de primer orden con un coeficiente de determinación de 0.798, 

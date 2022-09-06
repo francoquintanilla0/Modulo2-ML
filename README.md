@@ -20,6 +20,6 @@ Consecuentemente, graficamos la linea de tendencia que sigue nuestro modelo de R
 
 Por ultimo, hicimos algunas prediciones con los valores de la ecuación de nuestro modelo con el 20% de los datos de la evaluación, para despues poder sacar los valores de:
 
-* Coeficiente de determinación: 0.7980
-* Error cuadratico medio: 5.460
+* Coeficiente de determinación: 0.811
+* Error cuadratico medio: 5.762
 

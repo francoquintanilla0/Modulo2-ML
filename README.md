@@ -42,22 +42,9 @@ Para la varianza, obtuvimos la varianza de los datos para el test, como la varia
 
 En donde podemos ver que nuestra predicción tiene menos varianza, por lo que es un buen modelo de regresión lineal, y los datos se ajustan de manera correcta. 
 
+Para saber si nuestro modelo es overfitted o underfitted, graficamos el learning curve, que en nuestro caso, nos queda de la siguiente manera.
 
+<img width="383" alt="Captura de Pantalla 2022-09-08 a la(s) 15 32 21" src="https://user-images.githubusercontent.com/111082680/189220508-feb2e6ac-6638-47f4-87ad-952eeafef776.png">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Donde podemos ver que nuetsro modelo se comporta de buena manera al modelo de regresión lineal simple, y que no cae en el underfitting ni en el overfitting, si no, que es optima. 
 

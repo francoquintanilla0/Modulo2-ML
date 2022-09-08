@@ -37,8 +37,8 @@ Tambien, graficamos el comportamiento de nuestras predicciones.
 
 Para la varianza, obtuvimos la varianza de los datos para el test, como la varianza de nuestros resultados de la predición, y obtuvimos los siguientes resultados. 
 
-La varianza de y_test es 27.919
-La varianza de y_pred es 18.776
+* La varianza de y_test es 27.919
+* La varianza de y_pred es 18.776
 
 En donde podemos ver que nuestra predicción tiene menos varianza, por lo que es un buen modelo de regresión lineal, y los datos se ajustan de manera correcta. 
 

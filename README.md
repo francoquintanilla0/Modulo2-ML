@@ -35,6 +35,13 @@ Tambien, graficamos el comportamiento de nuestras predicciones.
 
 <img width="412" alt="Captura de Pantalla 2022-09-08 a la(s) 14 50 23" src="https://user-images.githubusercontent.com/111082680/189214113-19713b52-6ace-4343-8409-e57f38e4fe84.png">
 
+Para la varianza, obtuvimos la varianza de los datos para el test, como la varianza de nuestros resultados de la predición, y obtuvimos los siguientes resultados. 
+
+La varianza de y_test es 27.919
+La varianza de y_pred es 18.776
+
+En donde podemos ver que nuestra predicción tiene menos varianza, por lo que es un buen modelo de regresión lineal, y los datos se ajustan de manera correcta. 
+
 
 
 
